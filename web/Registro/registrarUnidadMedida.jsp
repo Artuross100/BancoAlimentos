@@ -1,8 +1,8 @@
 <jsp:useBean id="controlador" scope="session" class="Controller.Controlador"></jsp:useBean>
 <%
     String descripcion = request.getParameter("descripcion");
-    String mensaje = controlador.registrarEnfermedad(descripcion);
+    boolean mensaje = controlador.insertarUnidadMedida(descripcion);
 %>
 <script>
-    window.location.href="../registro.jsp";
+    window.location.href="../registroUnidadMedida.jsp";
 </script>
