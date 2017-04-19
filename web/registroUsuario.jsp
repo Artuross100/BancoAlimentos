@@ -1,9 +1,15 @@
+<%@page import="Entidades.TipoUsuario"%>
+<%@page import="Entidades.TipoPersona"%>
 <%@page import="Entidades.TipoIdentificacion"%>
 <%@page import="java.util.ArrayList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <jsp:useBean id="controlador" scope="session" class="Controller.Controlador"></jsp:useBean>
 
-<%ArrayList<TipoIdentificacion> enf = controlador.listarTipoIdentificacion();%>
+<%
+    ArrayList<TipoIdentificacion> enf = controlador.listarTipoIdentificacion();
+    ArrayList<TipoPersona> per = controlador.listarTipoPersona();
+    ArrayList<TipoUsuario> tipos = controlador.listarTipoUsuario();
+%>
 <div class="content">
     <div class="container-fluid">
         <div class="card">
@@ -37,9 +43,9 @@
                                 <div class="form-group">
                                     <label>Tipo de Usuario</label>
                                     <select class="form-control" name="tipoUsuario">
-                                        <%if (enf != null && !enf.isEmpty()) {%>
+                                        <%if (tipos != null && !tipos.isEmpty()) {%>
                                         <option value="0">Seleccione una opción</option>
-                                        <%for (TipoIdentificacion e : enf) {%>
+                                        <%for (TipoUsuario e : tipos) {%>
                                         <option value="<%=e.getId()%>"><%=e.getDescripcion()%></option>
                                         <%}
                                         } else {%>
@@ -50,9 +56,9 @@
                                 <div class="form-group">
                                     <label>Tipo de persona</label>
                                     <select class="form-control" name="tipoPersona">
-                                        <%if (enf != null && !enf.isEmpty()) {%>
+                                        <%if (per != null && !per.isEmpty()) {%>
                                         <option value="0">Seleccione una opción</option>
-                                        <%for (TipoIdentificacion e : enf) {%>
+                                        <%for (TipoPersona e : per) {%>
                                         <option value="<%=e.getId()%>"><%=e.getDescripcion()%></option>
                                         <%}
                                         } else {%>

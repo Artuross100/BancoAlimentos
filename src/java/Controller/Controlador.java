@@ -1,20 +1,6 @@
 package Controller;
 
-import Entidades.CondicionFisica;
-import Entidades.CondicionSocial;
-import Entidades.Enfermedad;
-import Entidades.EstadoCivil;
-import Entidades.EstadoMujer;
-import Entidades.Genero;
-import Entidades.GrupoAlimentos;
-import Entidades.InfoGeneral;
-import Entidades.NivelEscolar;
-import Entidades.Pagina;
-import Entidades.Parentesco;
-import Entidades.Producto;
-import Entidades.TipoIdentificacion;
-import Entidades.TipoVivienda;
-import Entidades.UnidadMedida;
+import Entidades.*;
 import Negocio.Negocio;
 import java.util.ArrayList;
 
@@ -165,5 +151,29 @@ public class Controlador {
     
     public ArrayList<Pagina> cargarPagina() {
         return this.negocio.cargarPagina();
+    }
+    
+    public String registrarTipoPersona(String tipo) {
+        return this.negocio.registrarTipoPersona(tipo);
+    }
+
+    public ArrayList<TipoPersona> listarTipoPersona() {
+        return this.negocio.listarTipoPersona();
+    }
+    
+    public String registrarTipoUsuario(String tipo) {
+        return this.negocio.registrarTipoUsuario(tipo);
+    }
+
+    public ArrayList<TipoUsuario> listarTipoUsuario() {
+        return this.negocio.listarTipoUsuario();
+    }
+    
+    public String registrarRol(String tipo) {
+        return this.negocio.registrarRol(tipo);
+    }
+
+    public ArrayList<Rol> listarRol() {
+        return this.negocio.listarRol();
     }
 }

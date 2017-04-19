@@ -5,8 +5,6 @@ import Entidades.*;
 import java.io.Serializable;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 public class Negocio implements Serializable {
 
@@ -407,6 +405,75 @@ public class Negocio implements Serializable {
         try{
             PaginaDao pag = new PaginaDao();
             return pag.cargar();
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+        return null;
+    }
+    
+    public String registrarTipoPersona(String tipo) {
+        try {
+            TipoPersonaDao t = new TipoPersonaDao();
+            if (t.registrar(tipo)) {
+                return "Registro exitoso";
+            }
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+            return "Hubo un error, inténtelo mas tarde";
+        }
+        return "No se pudo completar la operación";
+    }
+
+    public ArrayList<TipoPersona> listarTipoPersona() {
+        try {
+            TipoPersonaDao c = new TipoPersonaDao();
+            return c.cargar();
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+        return null;
+    }
+    
+    public String registrarTipoUsuario(String tipo) {
+        try {
+            TipoUsuarioDao t = new TipoUsuarioDao();
+            if (t.registrar(tipo)) {
+                return "Registro exitoso";
+            }
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+            return "Hubo un error, inténtelo mas tarde";
+        }
+        return "No se pudo completar la operación";
+    }
+
+    public ArrayList<TipoUsuario> listarTipoUsuario() {
+        try {
+            TipoUsuarioDao c = new TipoUsuarioDao();
+            return c.cargar();
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+        return null;
+    }
+    
+    public String registrarRol(String tipo) {
+        try {
+            RolDao t = new RolDao();
+            if (t.registrar(tipo)) {
+                return "Registro exitoso";
+            }
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+            return "Hubo un error, inténtelo mas tarde";
+        }
+        return "No se pudo completar la operación";
+    }
+
+    public ArrayList<Rol> listarRol() {
+        try {
+            RolDao c = new RolDao();
+            return c.cargar();
         } catch (SQLException ex) {
             ex.printStackTrace();
         }

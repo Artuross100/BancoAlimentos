@@ -29,9 +29,9 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="util/cerrarSesion.jsp">
                         <i class="ti-settings"></i>
-                        <p>Configuración</p>
+                        <p>Cerrar Sesión</p>
                     </a>
                 </li>
             </ul>
