@@ -2,20 +2,19 @@
     <div class="container-fluid">
         <nav class="pull-left">
             <ul>
-
                 <li>
-                    <a href="#">
-                        Arturo Saavedra
+                    <a href="http://www.ufps.edu.co" target="_blank">
+                        UFPS
                     </a>
                 </li>
                 <li>
-                    <a href="#">
-                        Blog
+                    <a href="httm://www.ingsistemas.ufps.edu.co" target="_blank">
+                        Ingeniería de sistemas
                     </a>
                 </li>
                 <li>
-                    <a href="#">
-                        Licencias
+                    <a href="http://www."target="_blank">
+                        Diocésis de Cúcuta
                     </a>
                 </li>
             </ul>
