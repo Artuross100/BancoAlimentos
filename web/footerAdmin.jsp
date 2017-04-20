@@ -8,12 +8,12 @@
                     </a>
                 </li>
                 <li>
-                    <a href="httm://www.ingsistemas.ufps.edu.co" target="_blank">
+                    <a href="http://www.ingsistemas.ufps.edu.co" target="_blank">
                         Ingeniería de sistemas
                     </a>
                 </li>
                 <li>
-                    <a href="http://www."target="_blank">
+                    <a href="http://www.diocesisdecucuta.com/diocesis2/"target="_blank">
                         Diocésis de Cúcuta
                     </a>
                 </li>
